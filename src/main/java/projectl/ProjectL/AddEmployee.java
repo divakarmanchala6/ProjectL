@@ -47,10 +47,6 @@ public class AddEmployee extends HttpServlet {
         String lastName = request.getParameter("lastName");
         String age = request.getParameter("age");
         String salary = request.getParameter("salary");
-
-        
-       
-        
         try {
 //        	System.out.println("Try block started");
 			Class.forName("com.mysql.cj.jdbc.Driver");
