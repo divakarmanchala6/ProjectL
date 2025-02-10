@@ -72,9 +72,10 @@ public class Employees extends HttpServlet {
 		}
 		
 		request.setAttribute("employees", employees);
-		RequestDispatcher dispatcher = request.getRequestDispatcher("./employees.jsp");
-		dispatcher.forward(request, response);
-		//response.getWriter().append("Served at: ").append(request.getContextPath());
+		response.sendRedirect("./employees");
+//		RequestDispatcher dispatcher = request.getRequestDispatcher("./employees.jsp");
+//		dispatcher.forward(request, response);
+//		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
 	/**
