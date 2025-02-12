@@ -8,7 +8,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-import javax.servlet.RequestDispatcher;
+//import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -36,12 +36,13 @@ public class Employees extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    	response.getWriter().append("Served at: ").append(request.getContextPath());
 		// TODO Auto-generated method stub
 		ArrayList<Employee> employees = new ArrayList<>();
 		try {
-			//System.out.println("Try block started");
+			System.out.println("Try block started");
 			Class.forName("com.mysql.cj.jdbc.Driver");
-			//System.out.println("Driver Loaded");
+			System.out.println("Driver Loaded");
 			Connection cnn = DriverManager.getConnection("jdbc:mysql://localhost:3306/myDB", "root", "password");
 			//System.out.println("Establishing the connection");
 			String query = "SELECT * FROM employees";
@@ -72,7 +73,7 @@ public class Employees extends HttpServlet {
 		}
 		
 		request.setAttribute("employees", employees);
-		response.sendRedirect("./employees");
+		//response.sendRedirect("./employees");
 //		RequestDispatcher dispatcher = request.getRequestDispatcher("./employees.jsp");
 //		dispatcher.forward(request, response);
 //		response.getWriter().append("Served at: ").append(request.getContextPath());

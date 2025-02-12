@@ -32,7 +32,7 @@ public class AddEmployee extends HttpServlet {
     
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
        
-    	response.sendRedirect("./employees");
+    	response.sendRedirect("./addemployee.html");
     }
 
 
@@ -68,13 +68,14 @@ public class AddEmployee extends HttpServlet {
 //		    System.out.println("Age: " + age);
 //		    System.out.println("Salary: " + salary);
 //		    System.out.println("----Details uploaded----");
+			response.sendRedirect("employees.jsp");
 			cnn.close();
 			prpt.close();
 		} catch (ClassNotFoundException | SQLException e) {
 //			System.out.println("not connected");
 			e.printStackTrace();
 		}
-        response.sendRedirect("./employees");
+        
         
     }
 

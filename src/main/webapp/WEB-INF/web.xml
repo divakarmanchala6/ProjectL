@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- This web.xml file is not required when using Servlet 3.0 container,
      see implementation details http://jersey.java.net/nonav/documentation/latest/jax-rs.html -->
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" version="3.0">
   <servlet>
     <servlet-name>Jersey Web Application</servlet-name>
     <servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>
@@ -11,38 +11,4 @@
     </init-param>
     <load-on-startup>1</load-on-startup>
   </servlet>
-  <servlet-mapping>
-    <servlet-name>Jersey Web Application</servlet-name>
-    <url-pattern>/webapi/*</url-pattern>
-  </servlet-mapping>
-  <servlet>
-    <description></description>
-    <display-name>employees</display-name>
-    <servlet-name>employees</servlet-name>
-    <servlet-class>projectl.ProjectL.Employees</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>employees</servlet-name>
-    <url-pattern>/employees</url-pattern>
-  </servlet-mapping>
-  <servlet>
-    <description></description>
-    <display-name>deleteEmployee</display-name>
-    <servlet-name>deleteEmployee</servlet-name>
-    <servlet-class>projectl.ProjectL.DeleteEmployee</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>deleteEmployee</servlet-name>
-    <url-pattern>/deleteEmployee</url-pattern>
-  </servlet-mapping>
-  <servlet>
-    <description></description>
-    <display-name>updateEmployee</display-name>
-    <servlet-name>updateEmployee</servlet-name>
-    <servlet-class>projectl.ProjectL.UpdateEmployee</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>updateEmployee</servlet-name>
-    <url-pattern>/updateEmployee</url-pattern>
-  </servlet-mapping>
 </web-app>
